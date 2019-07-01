@@ -22,9 +22,9 @@ public class ConfigReader {
 		 else throw new RuntimeException("URL not specified in the Configuration.properties file."); 
 		 }
 	 
-	 public String getWaitTime(){
+	 public long getWaitTime(){
 		 String sync = prop.getProperty("syncTime");
-		 if(sync!= null) return sync;
+		 if(sync!= null) return Long.parseLong(sync);
 		 else throw new RuntimeException("syncTime not specified in the Configuration.properties file."); 
 		 }
 	 
@@ -52,4 +52,7 @@ public class ConfigReader {
 		 else throw new RuntimeException("Version not specified in the Configuration.properties file."); 
 		 }
 	
+	 public String getExtentConfig() {
+		 return System.getProperty("user.dir") + "./extent-config.xml";
+	 }
 }

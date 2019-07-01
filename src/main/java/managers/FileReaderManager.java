@@ -29,5 +29,6 @@ public class FileReaderManager {
 	public JSONReader getJSON() throws IOException {
 		return new JSONReader();
 	}
+	
 }
 
