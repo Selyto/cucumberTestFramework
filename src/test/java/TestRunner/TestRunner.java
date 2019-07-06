@@ -2,6 +2,7 @@ package TestRunner;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.regex.Pattern;
 
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
@@ -16,7 +17,7 @@ import managers.FileReaderManager;
 @CucumberOptions(
 		features = "src/test/resources/functionalTests"
 		,glue = {"stepDefinitions"}  //byy default cucumber checks code inside src/test/java folder
-		,plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/testreport.html",
+		,plugin = {//"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/testreport.html",
 				"pretty", "json:target/cucumber-reports/Cucumber.json",
 				"junit:target/cucumber-reports/Cucumber.xml",
 				"html:target/cucumber-reports"},
@@ -27,5 +28,7 @@ public class TestRunner {
 	public static void writeExtentReport() throws IOException {
 		Reporter.loadXMLConfig(new File(FileReaderManager.fileRead().getConfiguration().getExtentConfig()));
 		Reporter.setSystemInfo("Selenium", "3.7.0");
+		Pattern. matches("String.", ".");
+		
 	}
 }

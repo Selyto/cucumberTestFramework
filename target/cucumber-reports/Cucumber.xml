@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="18.068441">
+<testcase classname="Product search" name="Customer place an order" time="18.068441">
+<system-out><![CDATA[Given User is on home page..................................................passed
+When he search for "shirt"..................................................passed
+And Add to cart.............................................................passed
+Then Search should be displayed.............................................passed
+Then Cart has the item......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

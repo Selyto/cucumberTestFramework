@@ -1,0 +1,121 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2019-07-06T16:56:58.371Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5498504800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeSteps()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Customer place an order",
+        "description": "",
+        "id": "product-search;customer-place-an-order",
+        "after": [
+          {
+            "result": {
+              "duration": 132300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 773744600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterSteps()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7475653000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on home page",
+            "match": {
+              "location": "HomePagesteps.user_is_on_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1871381400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "he search for \"shirt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"shirt\"",
+                  "offset": 14
+                }
+              ],
+              "location": "HomePagesteps.he_search_for(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 374402400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Add to cart",
+            "match": {
+              "location": "HomePagesteps.add_to_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 118611000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Search should be displayed",
+            "match": {
+              "location": "HomePagesteps.choose_first_Item()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1929177300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Cart has the item",
+            "match": {
+              "location": "CartSteps.cart_has_the_item()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Product search",
+    "description": "",
+    "id": "product-search",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/functionalTests/E2E.feature",
+    "tags": []
+  }
+]

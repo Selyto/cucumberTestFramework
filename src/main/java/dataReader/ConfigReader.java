@@ -1,19 +1,26 @@
 package dataReader;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
 
 	Properties prop;
+	FileInputStream is;
+	
    final String filename = "configs//config.properties";
 	
 	public ConfigReader() throws IOException {
-		FileInputStream is = new FileInputStream(filename);
-		Properties prop = new Properties();
+		try {
+		is = new FileInputStream(filename);
+		prop = new Properties();
 		prop.load(is);
+		}
+		catch(Exception e) {
+			System.out.println("File not found");
+			e.printStackTrace();
+		}
 	}
 	
 	 public String getURL(){

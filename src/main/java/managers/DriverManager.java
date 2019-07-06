@@ -15,7 +15,13 @@ public class DriverManager {
 	WebDriver driver;
 	static Browser browser;
 	
+	
 	public WebDriver getWebDriver() {
+		if(driver == null) driver = createWebDriver();
+		return driver;
+	}
+	
+	public WebDriver createWebDriver() {
 		try {
 			if(FileReaderManager.fileRead().getConfiguration().getisRemote().equalsIgnoreCase("Y")) {
 				driver = setUpRemoteBrowser();
@@ -39,6 +45,7 @@ public class DriverManager {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 			break;
 		case "firefox":
 			WebDriverManager.firefoxdriver().setup();

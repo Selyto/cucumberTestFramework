@@ -1,7 +1,9 @@
- Feature: Automated E2E YTest
+ Feature: Product search
  	
  	Scenario: Customer place an order
  		Given User is on home page
  		When he search for "shirt"
- 		And Choose first Item
+ 		And Add to cart
+ 		Then Search should be displayed
+ 		Then Cart has the item 
  	

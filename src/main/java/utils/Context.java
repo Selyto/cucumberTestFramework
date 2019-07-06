@@ -1,5 +1,6 @@
 package utils;
 
 public enum Context {
-XXX;
+SEARCH_TERM,
+PRODUCT_NAME
 }
